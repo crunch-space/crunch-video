@@ -278,41 +278,41 @@ export default {
 }
 .van-cell-group__title {
   padding: 0.5rem 0px 0.5rem !important;
-  color: #969799;
+  color: #969799 !important;
   font-size: 0.875rem !important;
-  line-height: 1rem;
+  line-height: 1rem  !important;
 }
 .van-cell-group--inset {
-  margin: 0px;
-  overflow: hidden;
-  border-radius: 8px;
+  margin: 0px  !important;
+  overflow: hidden  !important;
+  border-radius: 8px  !important;
 }
 .van-cell {
-  background: #2f2f2f;
-  border-radius: 8px;
-  color: #ffffff;
-  font-weight: 600;
+  background: #2f2f2f  !important;
+  border-radius: 8px  !important;
+  color: #ffffff  !important;
+  font-weight: 600  !important;
 }
 .van-cell__left-icon,
 .van-cell__right-icon {
-  height: 1.5rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  height: 1.5rem  !important;
+  font-size: 1.5rem  !important;
+  line-height: 1.5rem  !important;
 }
 .van-cell::after {
-  position: absolute;
-  box-sizing: border-box;
-  content: ' ';
-  pointer-events: none;
-  right: 16px;
-  bottom: 0;
-  left: 2.5rem;
-  border-bottom: 2px solid #1a1b1a;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
+  position: absolute  !important;
+  box-sizing: border-box  !important;
+  content: ' ' !important;
+  pointer-events: none  !important;
+  right: 16px  !important;
+  bottom: 0  !important;
+  left: 2.5rem  !important;
+  border-bottom: 2px solid #1a1b1a  !important;
+  -webkit-transform: scaleY(0.5)  !important;
+  transform: scaleY(0.5)  !important;
 }
 .iconoid {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5rem  !important;
+  height: 1.5rem  !important;
 }
 </style>
