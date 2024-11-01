@@ -93,6 +93,7 @@ export default {
       ],
       current: 0,
       count:0,
+      loading:false
     }
   },
   // 生命周期 - 创建完成（访问当前this实例）
@@ -120,7 +121,9 @@ export default {
      infiniteHandler($state) {
       console.log('触发');
       // console.log($state);
-      
+      if (this.loading) {
+        return
+      }
       if (this.page == 0) {
         return
       }
@@ -137,8 +140,10 @@ export default {
              page:this.page+1 ,
              limit:this.limit,
           }
+          this.loading = true
           getvideos(a).then(res=>{
             console.log(res,'123123');
+            this.loading = false
             this.list = res.data
             this.page = res.data.page
            this.addlist.push(...res.data.list)

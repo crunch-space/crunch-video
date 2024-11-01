@@ -107,7 +107,8 @@ export default {
       console.log(123)
     },
     invite(){
-      this.$router.push('invite')
+      console.log(123)
+      // this.$router.push('invite')
     }
   },
 }
@@ -227,7 +228,7 @@ export default {
 }
 .invifont {
   position: absolute;
-  width: 8.3125rem;
+  width: 8.625rem;
   height: 2rem;
   top: 0.4375rem;
   left: 5.5rem;
@@ -271,9 +272,9 @@ export default {
   word-wrap: break-word;
 }
 </style>
-<style sc >
+<style  >
 .van-cell--clickable .van-cell {
-  background-color: red !important;;
+  /* background-color: red !important;; */
 }
 .van-cell-group__title {
   padding: 0.5rem 0px 0.5rem !important;
