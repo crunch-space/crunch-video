@@ -84,11 +84,11 @@
         </div>
       </div>
       <div class="unlockall">
-        <div class="lockfontset">Unlock all episodes <br/> Get 1000 <img class="coin" src="../../assets/page/coin.png" alt="" srcset=""> fro Free  </div>
+        <div class="lockfontset">Unlock all episodes <br/> Get {{videocontent.price}} <img class="coin" src="../../assets/page/coin.png" alt="" srcset=""> fro Free  </div>
         <div class="alset"><img class="cnterimg " src="../../assets/page/Illustration.png" alt="" srcset=""></div>
         <div class="eddcoin ">
           <img class="coins" src="../../assets/page/Coin1.png" alt="" srcset="">
-          <div>1000</div>
+          <div> {{videocontent.price}}</div>
         </div>
       </div>
     </van-popup>
@@ -107,23 +107,23 @@
                 <img class="Coinbig" src="../../assets/page/Coinbig.png" alt="" srcset="">
                 <div class="ment">
                   <div class="coinadd">
-                      <div class="loknum">100</div>
-                    <div class="coins">coins</div>
+                      <div class="loknum">{{videocontent.price}}</div>
+                    <!-- <div class="coins">coins</div> -->
                     <br/>
                    
                   </div>
                 <!-- <br/> -->
                   <div class="perep">
-                  Per episode
+                  All episode
                  </div>
                 </div>
            </div>
           
       </div>
-      <div class="check">
+      <!-- <div class="check">
              <van-checkbox v-model="checked"></van-checkbox>
              <div style="margin-left:5px">Auto-unlock, no more prompts</div>
-      </div>
+      </div> -->
         <div  class="downduck" @click="showunlock = false" >
                   <img style="width:.6rem;height:.75rem;" src="../../assets/page/Icon.png" alt="" srcset="">
                   Unlock Now
@@ -157,158 +157,158 @@ export default {
     return {
       msg: '测试',
       value: 50,
-      nowplay: 5,
+      nowplay: 0,
       lastplayid:'',
       lastplaybfid:'',
-      nowplayid: '0112',
+      nowplayid: '',
       checked:true,
       show: false,
       showunlock: false,
       mutedset: true,
       videocontent: {
-        name: 'The Bahamas Redemption',
+        name: '',
         isbuy:false, //整剧解锁
         imgsrc:
-          'https://img1.baidu.com/it/u=1687773862,501709891&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1727974800&t=eded5130bf8ae4b731fe203ddb98ba63',
+          '',
         content: [
-          {
-            accid: '0111',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁 单集解锁
-          },
-          {
-            accid: '0112',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0113',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0114',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0115',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0116',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0117',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0118',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '01141',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '015311',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '011123',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '012311',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0112341',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '23411',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 0, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '011213311',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '01123441',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0111123',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '011231123',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '011231211',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '011231311',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '0123111',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '011231411',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
-          {
-            accid: '333113',
-            videosrc:
-              'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
-            unlock: 1, // 0 解锁 1 未解锁
-          },
+          // {
+          //   accid: '0111',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁 单集解锁
+          // },
+          // {
+          //   accid: '0112',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0113',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0114',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0115',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0116',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0117',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0118',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '01141',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '015311',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '011123',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '012311',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0112341',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '23411',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 0, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '011213311',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '01123441',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0111123',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '011231123',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '011231211',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '011231311',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '0123111',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '011231411',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
+          // {
+          //   accid: '333113',
+          //   videosrc:
+          //     'https://copyright-public.oss-cn-beijing.aliyuncs.com/picture/202410/1841832347415351296.mp4',
+          //   unlock: 1, // 0 解锁 1 未解锁
+          // },
           // 其他视频数据...
         ],
       },
@@ -326,9 +326,12 @@ export default {
   mounted() {
     // 禁止拖动进度条
 
-    this.init()
+    // this.init()
+    //    this.inittap() //设置弹窗下标
+
+    
     // this.playAV()
-    this.inittap() //设置弹窗下标
+ 
     //     this.fillVideoWithScreen()
     //     document.getElementById('video').addEventListener('click', function() {
     //   // 在这里处理点击事件，例如播放或暂停视频
@@ -342,10 +345,53 @@ export default {
         id:this.$route.query.video_id
       }
     getdetail(a).then(res=>{
-      console.log(res,'ressssss');
-      
+      console.log(res,);
+
+      let a = res.data
+       a.episodes = a.episodes.map(episode => ({
+        accid: episode.episode_id,
+        title: episode.title,
+        videosrc: episode.url,
+        unlock: 0
+    }));
+
+    // 插入新数据
+    for (let i = 0; i < a.total - a.free; i++) {
+        let newEpisode = {
+            accid: i + 1000,
+            title: '',
+            videosrc: '',
+            unlock: 1
+        };
+        a.episodes.push(newEpisode);
+    }
+
+    //      for (let i = 0; i < a.total - a.free; i++) {
+    //     let newEpisode = {
+    //         episode_id: i,
+    //         title: '',
+    //         url: '',
+    //         unlock: 1
+    //     };
+    //     a.episodes.push(newEpisode);
+    // }
+      console.log(a,'ressssss');
+      let e = {
+        ...a
+      }
+      e.content = a.episodes
+      e.name = a.title
+      e.isbuy = a.is_buy
+      e.imgsrc = a.thumbnail_url
+       this.videocontent = e
+        this.nowplayid = e.content[0].accid
+        this.init()
+       this.inittap() //设置弹窗下标
     })
+
     },
+
+   
         handleClick() {
       // 在这里执行您的点击事件逻辑
       console.log(222);
@@ -800,6 +846,7 @@ video::-webkit-media-controls-fullscreen-button {
   font-weight: 700;
   font-size: 2.25rem;
   color: #ffe133;
+  margin-left: .4375rem;
 }
 .coins{
   font-weight: 400;
@@ -868,7 +915,7 @@ margin-top: .625rem;
 .video-list {
   display: flex;
   flex-wrap: wrap;
-  min-height: 17.25rem;
+  /* min-height: 17.25rem; */
 }
 .choose {
   width: 3.75rem;

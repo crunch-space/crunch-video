@@ -31,7 +31,7 @@
     </div>
     <div class="invite" @click="invite()">
       <img class="inviteimg" src="../../assets/page/invite.png" alt="" srcset="">
-      <div class="invifont">Invite your friends
+      <div class="invifont">Invite your friends<br/>
         to earn more coins</div>
       <img class="inviteleft" src="../../assets/page/Iconleft.png" alt="" srcset="">
     </div>
@@ -228,7 +228,7 @@ export default {
 }
 .invifont {
   position: absolute;
-  width: 8.625rem;
+  /* width: 100%; */
   height: 2rem;
   top: 0.4375rem;
   left: 5.5rem;

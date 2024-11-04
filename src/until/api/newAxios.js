@@ -46,7 +46,7 @@ export const getsend = function (urls,method) {
       let Authorization = localStorage.getItem('token')
       console.log(params);
       axiosService({
-          url:urladd + urls +`/${params.id}`+`/1`,
+          url:urladd + urls +`/${params.id}`+`/`,
           method: 'get',
           params: params,
           
