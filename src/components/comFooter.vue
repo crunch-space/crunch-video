@@ -57,6 +57,13 @@ export default {
 
     }
   },
+    watch: {
+    '$route'(to, from) {
+      console.log(to);
+      
+      this.checkNavigationVisibility(to.path);
+    }
+  },
   mounted() {
     this.$router.beforeEach((to, from, next) => {
       // console.log(to.path);
@@ -64,7 +71,9 @@ export default {
       this.checkNavigationVisibility(to.path);
       next();
     });
+    
   }
+  
 }
 </script>
 

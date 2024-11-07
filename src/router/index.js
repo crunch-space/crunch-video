@@ -5,7 +5,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'home',
       component: () => import('@/view/home/home.vue') // 使用动态导入
     },

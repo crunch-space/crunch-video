@@ -61,7 +61,7 @@ export default {
       addlist:[],
       page:0,
       limit:10,
-      text:'Loading...',
+      text:'Loading....',
       bannerlist: [
         // {
         //   imgsrc:
@@ -129,7 +129,7 @@ export default {
       }
       if (this.addlist.length >= this.list.total) {
           // $state.complete();
-          this.text = 'no more...'
+          this.text = 'no more....'
           return
       }else{
         this.load()

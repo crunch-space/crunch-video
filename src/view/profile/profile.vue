@@ -119,6 +119,12 @@ export default {
 .flex {
   display: flex;
 }
+.box{
+   width: 100%;
+  height: 100%;
+  overflow: auto;
+   box-sizing: border-box;
+}
 .lockmen {
   display: flex;
   justify-content: left;
