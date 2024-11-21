@@ -2,42 +2,40 @@
 <template>
   <div class="box" id="env">
     <!-- Dom内容 -->
-   <div class="head flex">
-        <img class="headlogo" src="../../assets/page/pageLogo.png" alt="" srcset="">
-         <!-- <img class="headmenu" src="../../assets/page/menu.png" alt="" srcset=""> -->
+    <div class="head flex">
+      <img class="headlogo" src="../../assets/page/pageLogo.png" alt="" srcset="">
+      <!-- <img class="headmenu" src="../../assets/page/menu.png" alt="" srcset=""> -->
     </div>
-     <div class="headet">
-        <div class="Wallet">
-       My Reards
+    <div class="headet">
+      <div class="Wallet">
+        My Reards
       </div>
-       <div class="flex euen ">
+      <div class="flex euen ">
         <!-- <img class="Coin1" src="../../assets/page/Coin1.png" alt="" srcset=""> -->
         <div class="fonta">10,010,000</div>
       </div>
-
     </div>
-      <div class="history ">
-       History
-      </div> 
-      <div class="historylist">
-            <div v-for="item,index in historydata" :key="index" class="flex setadd" >
-         <div class="lockmen">
-      <img class="frame" src="../../assets/page/Frame.png" alt="" srcset="">
-      <div class="flex setparse ">
-             <div class="ment">
-        <div class="loknum">{{item.name}}</div>
-        <div class="perep">
-        {{item.time}}
+    <div class="history ">
+      History
+    </div>
+    <div class="historylist">
+      <div v-for="item,index in historydata" :key="index" class="flex setadd">
+        <div class="lockmen">
+          <img class="frame" src="../../assets/page/Frame.png" alt="" srcset="">
+          <div class="flex setparse ">
+            <div class="ment">
+              <div class="loknum">{{item.name}}</div>
+              <div class="perep">
+                {{item.time}}
+              </div>
+            </div>
+            <div class="cont">
+              {{item.cont}}
+            </div>
+          </div>
         </div>
       </div>
-      <div class="cont">
-        {{item.cont}}
-      </div>
-      </div>
-     
     </div>
-            </div>
-      </div>
   </div>
 </template>
 
@@ -47,56 +45,53 @@ export default {
   name: '',
   data() {
     return {
+    
       msg: '测试',
-      historydata:[
+      historydata: [
         {
-            name:'0x_Shart',
-            time:'2024-10-31',
-            cont:'100'
+          name: '0x_Shart',
+          time: '2024-10-31',
+          cont: '100',
         },
-         {
-            name:'0x_Json',
-            time:'2024-10-31',
-            cont:'10'
+        {
+          name: '0x_Json',
+          time: '2024-10-31',
+          cont: '10',
         },
-         {
-            name:'0x_Bay',
-            time:'2024-10-31',
-            cont:'20'
+        {
+          name: '0x_Bay',
+          time: '2024-10-31',
+          cont: '20',
         },
-         {
-            name:'0x_Dachun',
-            time:'2024-10-31',
-            cont:'40'
+        {
+          name: '0x_Dachun',
+          time: '2024-10-31',
+          cont: '40',
         },
-         {
-            name:'0x_Mom',
-            time:'2024-10-31',
-            cont:'50'
+        {
+          name: '0x_Mom',
+          time: '2024-10-31',
+          cont: '50',
         },
-         {
-            name:'0x_Dad',
-            time:'2024-10-31',
-            cont:'70'
-        }
-
+        {
+          name: '0x_Dad',
+          time: '2024-10-31',
+          cont: '70',
+        },
       ],
     }
   },
   // 生命周期 - 创建完成（访问当前this实例）
-  created() {
-      
-  },
+ 
   // 生命周期 - 挂载完成（访问DOM元素）
-  mounted() {
-      
-  },
+  mounted() {},
   // Vue方法定义
   methods: {
-      back(){
-        this.$router.go(-1)
-      }
-  }
+   
+    back() {
+      this.$router.go(-1)
+    },
+  },
 }
 </script>
 
@@ -106,17 +101,16 @@ export default {
   width: 100%;
   height: 100%;
   overflow: auto;
-   box-sizing: border-box;
- 
+  box-sizing: border-box;
 }
-.flex{
+.flex {
   display: flex;
 }
-.head{
-width: 100%;
-justify-content:space-between;
+.head {
+  width: 100%;
+  justify-content: space-between;
 }
-.headlogo{
+.headlogo {
   width: 6.5375rem;
   height: 1.575rem;
 }
@@ -125,10 +119,10 @@ justify-content:space-between;
   margin-left: 0.1875rem;
   margin-right: 0.625rem;
   color: #c4c2c0; */
-    font-size: 2.125rem;
-    font-weight: 700;
-    margin-left: -0.3125rem;
-    margin-top: .3125rem;
+  font-size: 2.125rem;
+  font-weight: 700;
+  margin-left: -0.3125rem;
+  margin-top: 0.3125rem;
 }
 .headet {
   width: 100%;
@@ -140,22 +134,22 @@ justify-content:space-between;
   box-sizing: border-box;
   position: relative;
 }
-.history{
-    margin: .9375rem 0px .9375rem 0px;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #FFFFFF;
+.history {
+  margin: 0.9375rem 0px 0.9375rem 0px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
 }
-.frame{
+.frame {
   width: 3rem;
   height: 3rem;
   align-self: center;
 }
-.setparse{
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: 1px solid ;
-    height: 4.375rem;
+.setparse {
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid;
+  height: 4.375rem;
 }
 .lockmen {
   display: flex;
@@ -177,17 +171,17 @@ justify-content:space-between;
   color: #ffffff;
 }
 .perep {
-  font-size: .9375rem;
-  color: #ffffff;;
+  font-size: 0.9375rem;
+  color: #ffffff;
   text-align: left;
 }
-.cont{
-    align-self: center;
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: #ffe133;
+.cont {
+  align-self: center;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffe133;
 }
-.setadd{
-    margin-bottom: .625rem;
+.setadd {
+  margin-bottom: 0.625rem;
 }
 </style>

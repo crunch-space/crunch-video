@@ -12,8 +12,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@coinbase/wallet-sdk": "^4.2.3",
+    "@klaytn/kaikas-web3-provider": "^1.0.3",
+    "@klaytn/klip-web3-provider": "^1.0.2",
+    "@klaytn/web3modal": "^1.1.1",
     "axios": "^1.5.0",
     "element-ui": "^2.15.14",
+    "ethers": "^5.7.2",
     "vant": "^2.13.2",
     "vconsole": "^3.15.1",
     "vue": "^2.5.2",

@@ -4,7 +4,7 @@
     <!-- Dom内容 -->
 
     <div class="lockmen">
-      <img class="Coinbig" src="../../assets/page/Frame.png" alt="" srcset="">
+      <img class="Coinbig" @click="connectWallet" src="../../assets/page/Frame.png" alt="" srcset="">
       <div class="ment">
         <div class="loknum">0xCrunch</div>
         <div class="perep">
@@ -31,7 +31,7 @@
     </div>
     <div class="invite" @click="invite()">
       <img class="inviteimg" src="../../assets/page/invite.png" alt="" srcset="">
-      <div class="invifont">Invite your friends<br/>
+      <div class="invifont">Invite your friends<br />
         to earn more coins</div>
       <img class="inviteleft" src="../../assets/page/Iconleft.png" alt="" srcset="">
     </div>
@@ -40,7 +40,7 @@
 
       </van-cell-group>
       <div class="cells">
-        <van-cell center title="Wallet" @click="click"   size="large" :value="value">
+        <van-cell center title="Wallet" @click="click" size="large" :value="value">
           <template #icon>
             <img class="iconoid" src="../../assets/page/crypto-wallet.png" alt="" srcset="">
           </template>
@@ -48,7 +48,7 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="My List" @click="click"   size="large" >
+        <van-cell center title="My List" @click="click" size="large">
           <template #icon>
             <img class="iconoid" src="../../assets/page/list2.png" alt="" srcset="">
           </template>
@@ -56,15 +56,15 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="Setting" @click="click"   size="large" >
+        <van-cell center title="Setting" @click="click" size="large">
           <template #icon>
-            <img class="iconoid" src="../../assets/page/list3.png"  alt="" srcset="">
+            <img class="iconoid" src="../../assets/page/list3.png" alt="" srcset="">
           </template>
           <template #right-icon>
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="Feedback" @click="click"   size="large" >
+        <van-cell center title="Feedback" @click="click" size="large">
           <template #icon>
             <img class="iconoid" src="../../assets/page/list4.png" alt="" srcset="">
           </template>
@@ -72,15 +72,15 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="About Us" @click="click"   size="large" >
+        <van-cell center title="About Us" @click="click" size="large">
           <template #icon>
-            <img class="iconoid" src="../../assets/page/list5.png"  alt="" srcset="">
+            <img class="iconoid" src="../../assets/page/list5.png" alt="" srcset="">
           </template>
           <template #right-icon>
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-       
+
       </div>
 
     </div>
@@ -89,27 +89,45 @@
 
 <script>
 // import a from './a'; // 引入组件
+import { ethers } from 'ethers'
+import Web3Modal from '@klaytn/web3modal'
 export default {
   name: '',
   data() {
     return {
+      provider: null,
+      web3Modal: null,
       msg: '测试',
       value: '10,010,000',
     }
   },
   // 生命周期 - 创建完成（访问当前this实例）
-  created() {},
+  created() {
+    this.web3Modal = new Web3Modal({
+      cacheProvider: true,
+    })
+  },
   // 生命周期 - 挂载完成（访问DOM元素）
   mounted() {},
   // Vue方法定义
   methods: {
+     async connectWallet() {
+      try {
+        const web3ModalProvider = await this.web3Modal.connect()
+        const ethersProvider = new ethers.BrowserProvider(web3ModalProvider)
+        const provider = new ethers.providers.Web3Provider(web3ModalProvider)
+        this.provider = web3ModalProvider
+      } catch (error) {
+        console.error(error)
+      }
+    },
     click() {
       console.log(123)
     },
-    invite(){
+    invite() {
       console.log(123)
       // this.$router.push('invite')
-    }
+    },
   },
 }
 </script>
@@ -119,11 +137,11 @@ export default {
 .flex {
   display: flex;
 }
-.box{
-   width: 100%;
+.box {
+  width: 100%;
   height: 100%;
   overflow: auto;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 .lockmen {
   display: flex;
@@ -286,39 +304,39 @@ export default {
   padding: 0.5rem 0px 0.5rem !important;
   color: #969799 !important;
   font-size: 0.875rem !important;
-  line-height: 1rem  !important;
+  line-height: 1rem !important;
 }
 .van-cell-group--inset {
-  margin: 0px  !important;
-  overflow: hidden  !important;
-  border-radius: 8px  !important;
+  margin: 0px !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
 }
 .van-cell {
-  background: #2f2f2f  !important;
-  border-radius: 8px  !important;
-  color: #ffffff  !important;
-  font-weight: 600  !important;
+  background: #2f2f2f !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
 }
 .van-cell__left-icon,
 .van-cell__right-icon {
-  height: 1.5rem  !important;
-  font-size: 1.5rem  !important;
-  line-height: 1.5rem  !important;
+  height: 1.5rem !important;
+  font-size: 1.5rem !important;
+  line-height: 1.5rem !important;
 }
 .van-cell::after {
-  position: absolute  !important;
-  box-sizing: border-box  !important;
+  position: absolute !important;
+  box-sizing: border-box !important;
   content: ' ' !important;
-  pointer-events: none  !important;
-  right: 16px  !important;
-  bottom: 0  !important;
-  left: 2.5rem  !important;
-  border-bottom: 2px solid #1a1b1a  !important;
-  -webkit-transform: scaleY(0.5)  !important;
-  transform: scaleY(0.5)  !important;
+  pointer-events: none !important;
+  right: 16px !important;
+  bottom: 0 !important;
+  left: 2.5rem !important;
+  border-bottom: 2px solid #1a1b1a !important;
+  -webkit-transform: scaleY(0.5) !important;
+  transform: scaleY(0.5) !important;
 }
 .iconoid {
-  width: 1.5rem  !important;
-  height: 1.5rem  !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
 }
 </style>
