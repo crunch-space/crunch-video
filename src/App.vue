@@ -65,6 +65,9 @@ html{
   vertical-align: middle;
   word-wrap: break-word;
 }
+.van-field__control {
+  color: #FFFFFF;
+}
 </style>
 <style  >
 .van-cell--clickable .van-cell {
