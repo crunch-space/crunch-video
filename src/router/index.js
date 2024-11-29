@@ -28,6 +28,32 @@ export default new Router({
       path: '/invite',
       name: 'invite',
       component: () => import('@/view/profile/invite.vue') // 使用动态导入
+    },
+    {
+      path: '/wallete',
+      name: 'wallete',
+      component: () => import('@/view/wallete/index.vue') // 使用动态导入
+    },
+    {
+      path: '/mylist',
+      name: 'mylist',
+      component: () => import('@/view/mylist/index.vue') // 使用动态导入
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: () => import('@/view/setting/index.vue') // 使用动态导入
+    },
+     {
+      path: '/feed',
+      name: 'feed',
+      component: () => import('@/view/feed/index.vue') // 使用动态导入
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('@/view/about/index.vue') // 使用动态导入
     }
+
   ]
 })

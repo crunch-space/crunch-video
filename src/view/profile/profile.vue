@@ -40,7 +40,7 @@
 
       </van-cell-group>
       <div class="cells">
-        <van-cell center title="Wallet" @click="click" size="large" :value="value">
+        <van-cell center title="Wallet" @click="click(0)" size="large" :value="value">
           <template #icon>
             <img class="iconoid" src="../../assets/page/crypto-wallet.png" alt="" srcset="">
           </template>
@@ -48,7 +48,7 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="My List" @click="click" size="large">
+        <van-cell center title="My List"  @click="click(1)" size="large">
           <template #icon>
             <img class="iconoid" src="../../assets/page/list2.png" alt="" srcset="">
           </template>
@@ -56,7 +56,7 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="Setting" @click="click" size="large">
+        <van-cell center title="Setting" @click="click(2)"  size="large">
           <template #icon>
             <img class="iconoid" src="../../assets/page/list3.png" alt="" srcset="">
           </template>
@@ -64,7 +64,7 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="Feedback" @click="click" size="large">
+        <van-cell center title="Feedback" @click="click(3)" size="large">
           <template #icon>
             <img class="iconoid" src="../../assets/page/list4.png" alt="" srcset="">
           </template>
@@ -72,7 +72,7 @@
             <img class="iconoid" src="../../assets/page/rightsmall.png" alt="" srcset="">
           </template>
         </van-cell>
-        <van-cell center title="About Us" @click="click" size="large">
+        <van-cell center title="About Us" @click="click(4)" size="large">
           <template #icon>
             <img class="iconoid" src="../../assets/page/list5.png" alt="" srcset="">
           </template>
@@ -121,8 +121,22 @@ export default {
         console.error(error)
       }
     },
-    click() {
-      console.log(123)
+    click(e) {
+      // console.log(123)
+      if (e==0) {
+          this.$router.push({path: `/wallete`})
+      }else if(e==1 ){ 
+this.$router.push({path: `/mylist`})
+      }
+      else if(e==2 ){ 
+this.$router.push({path: `/setting`})
+      }
+       else if(e==3 ){ 
+this.$router.push({path: `/feed`})
+      }
+      else if(e==4 ){ 
+this.$router.push({path: `/about`})
+      }
     },
     invite() {
       console.log(123)
