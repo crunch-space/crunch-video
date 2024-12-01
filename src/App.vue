@@ -66,7 +66,7 @@ html{
   word-wrap: break-word;
 }
 .van-field__control {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 </style>
 <style  >
