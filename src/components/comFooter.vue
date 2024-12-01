@@ -53,7 +53,7 @@ export default {
     checkNavigationVisibility(e) {
       // console.log(e);
       // 
-      this.shouldHideNavigation = !['/', '/profile', '/invite'].includes(e);
+      this.shouldHideNavigation = !['/', '/invite', '/rewards'].includes(e);
 
     }
   },
