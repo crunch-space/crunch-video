@@ -15,7 +15,7 @@
       <img :src="props.active ? icon.rewardsactive : icon.rewardsinactive" />
     </template>
   </van-tabbar-item>
-  <van-tabbar-item replace to="/invite" icon="search">
+  <van-tabbar-item replace to="/profile" icon="search">
     <span>Profile</span>
     <template #icon="props">
       <img :src="props.active ? icon.profileactive : icon.profileinactive" />
@@ -53,7 +53,7 @@ export default {
     checkNavigationVisibility(e) {
       // console.log(e);
       // 
-      this.shouldHideNavigation = !['/', '/invite', '/rewards'].includes(e);
+      this.shouldHideNavigation = !['/', '/profile', '/rewards'].includes(e);
 
     }
   },
