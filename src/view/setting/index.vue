@@ -80,7 +80,7 @@ export default {
   methods: {
         back() {
       //回退
-      this.$router.go(-1)
+       this.$router.push({path: `/profile`})
     },
   }
 }
