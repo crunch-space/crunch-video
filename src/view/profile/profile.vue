@@ -4,7 +4,7 @@
     <!-- Dom内容 -->
 
     <div class="lockmen">
-      <img class="Coinbig" @click="connectWallet" src="../../assets/page/Frame.png" alt="" srcset="">
+      <img class="Coinbig" src="../../assets/page/Frame.png" alt="" srcset="">
       <div class="ment">
         <div class="loknum">0xCrunch</div>
         <div class="perep">
