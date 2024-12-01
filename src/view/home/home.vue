@@ -61,7 +61,7 @@ export default {
       addlist:[],
       page:0,
       limit:10,
-      text:'Loading....',
+      text:'Loading...',
       bannerlist: [
         // {
         //   imgsrc:
