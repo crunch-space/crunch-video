@@ -129,7 +129,7 @@ export default {
       }
       if (this.addlist.length >= this.list.total) {
           // $state.complete();
-          this.text = 'no more....'
+          this.text = 'no more'
           return
       }else{
         this.load()
