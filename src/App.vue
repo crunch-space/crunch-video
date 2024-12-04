@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <p>{{liffId}}</p>
+    <p>{{e}}</p>
      <p v-if="message">{{ message }}</p>
     <p v-if="error">
       {{ error }}
@@ -21,6 +23,7 @@ export default {
     return{
      message: "",
       error: "",
+      e:'',
      liffId: process.env.VITE_LIFF_ID
     }
   },
@@ -31,7 +34,8 @@ export default {
       .init({
        liffId: 'a663ad2d041b67c007cbd6600ebd208b'
       })
-      .then(() => {
+      .then((e) => {
+        this.e = e
         this.message = "LIFF init succeeded.";
       })
       .catch((e) => {
