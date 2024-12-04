@@ -2,7 +2,7 @@
   <div id="app">
      <p v-if="message">{{ message }}</p>
     <p v-if="error">
-      <code>{{ error }}</code>
+      {{ error }}
     </p>
     <router-view />
     <Foot/>
