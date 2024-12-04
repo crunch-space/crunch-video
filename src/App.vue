@@ -1,18 +1,47 @@
 <template>
   <div id="app">
+     <p v-if="message">{{ message }}</p>
+    <p v-if="error">
+      <code>{{ error }}</code>
+    </p>
     <router-view />
     <Foot/>
   </div>
 </template>
 
 <script>
+import liff from "@line/liff";
 import Foot from './components/comFooter.vue'
 export default {
    components: {
     Foot
   },
-  name: 'App'
+  name: 'App',
+  data(){
+    return{
+     message: "",
+      error: "",
+     liffId: process.env.VITE_LIFF_ID
+    }
+  },
+       mounted() {
+        console.log(process.env.VITE_LIFF_ID);
+        
+    liff
+      .init({
+       liffId: 'a663ad2d041b67c007cbd6600ebd208b'
+      })
+      .then(() => {
+        this.message = "LIFF init succeeded.";
+      })
+      .catch((e) => {
+        this.message = "LIFF init failed.";
+        this.error = `${e}`;
+      });
+  }
 }
+
+
 </script>
 
 <style>
