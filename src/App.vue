@@ -28,9 +28,9 @@ export default {
     }
   },
        mounted() {
-        const liffId='4024892767f6ebc0e14be118eef60409'
-    liff.init({
-       liffId
+        // const liffId='4024892767f6ebc0e14be118eef60409'
+    liff.getAccessToken({
+       liffId:'4024892767f6ebc0e14be118eef60409'
       })
       .then((e) => {
         this.e = e
