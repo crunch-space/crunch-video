@@ -28,7 +28,7 @@ export default {
     }
   },
        mounted() {
-        const liffId='a663ad2d041b67c007cbd6600ebd208b'
+        const liffId='4024892767f6ebc0e14be118eef60409'
     liff.init({
        liffId
       })
