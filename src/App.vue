@@ -2,7 +2,7 @@
   <div id="app">
   
     <p>{{e}}</p>
-     <p v-if="message">{{ message }}</p>
+     <p v-if="message" @click="show">{{ message }}</p>
     <p v-if="error">
       {{ error }}
     </p>
@@ -40,7 +40,26 @@ export default {
         this.message = "LIFF init failed.";
         this.error = `${e}`;
       });
+  },
+   methods: {
+    show(){
+      this.message = '' 
+      this.error = ''
+       const liffId='4024892767f6ebc0e14be118eef60409'
+    liff.init({
+       liffId
+      })
+      .then((e) => {
+        this.e = e
+        this.message = "LIFF init succeeded again.";
+      })
+      .catch((e) => {
+        this.message = "LIFF init failed again.";
+        this.error = `${e}`;
+      });
+    }
   }
+ 
 }
 
 
