@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p>{{liffId}}</p>
+  
     <p>{{e}}</p>
      <p v-if="message">{{ message }}</p>
     <p v-if="error">
@@ -28,11 +28,9 @@ export default {
     }
   },
        mounted() {
-        console.log(process.env.VITE_LIFF_ID);
-        
-    liff
-      .init({
-       liffId: 'a663ad2d041b67c007cbd6600ebd208b'
+        const liffId='a663ad2d041b67c007cbd6600ebd208b'
+    liff.init({
+       liffId
       })
       .then((e) => {
         this.e = e
