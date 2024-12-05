@@ -24,11 +24,11 @@ export default {
      message: "",
       error: "",
       e:'',
-     liffId: process.env.VITE_LIFF_ID
+
     }
   },
        mounted() {
-        const liffId='806d10e20657f2e6b8c3d81f2fcc7a23'
+        const liffId='4024892767f6ebc0e14be118eef60409'
     liff.init({
        liffId
       })
